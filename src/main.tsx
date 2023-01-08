@@ -19,17 +19,17 @@ import ReactDOM from "react-dom/client";
 import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import { Create } from "./pages/Home";
-import DebugTexts from "./pages/DebugTexts";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Home />
-      </>
-    ),
+    element: <Home />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 
@@ -54,7 +54,7 @@ ReactDOM.render(
             <Toolbar>
               <Typography variant="h6" color="inherit" noWrap>
                 <Link href="/" style={{ color: "white" }}>
-                  Test
+                  Loveletter
                 </Link>
               </Typography>
             </Toolbar>

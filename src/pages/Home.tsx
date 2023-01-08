@@ -1,9 +1,11 @@
 import * as React from "react";
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <>
-      <h1>Loveletter</h1>
+      <h1>Hello world</h1>
     </>
   );
 };
+
+export default Home;
