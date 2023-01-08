@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { signOut } from "firebase/auth";
 import * as React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -12,23 +13,23 @@ const Login: React.FC = () => {
     <>
       <h1>Hello world</h1>
       {user === null ? (
-        <button
+        <Button
           onClick={() => {
             signInWithGoogle();
           }}
         >
           Login with Google
-        </button>
+        </Button>
       ) : (
         <>
           <h1>Logged in as {user?.displayName}</h1>
-          <button
+          <Button
             onClick={() => {
               signOut(auth);
             }}
           >
             Log out
-          </button>
+          </Button>
         </>
       )}
     </>
