@@ -18,9 +18,13 @@ import ReactDOM from "react-dom/client";
 */
 import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AddNewLovepoint from "./pages/AddNewLovepoint";
 import "./index.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Invite from "./pages/Invite";
+import InviteAccept from "./pages/InviteAccept";
+import LoveletterSearch from "./pages/LoveletterSearch";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +34,22 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/loveletter/new",
+    element: <AddNewLovepoint />,
+  },
+  {
+    path: "/loveletter/invite/:id",
+    element: <Invite />,
+  },
+  {
+    path: "/loveletter/invite/:id/accept",
+    element: <InviteAccept />,
+  },
+  {
+    path: "/loveletter/search",
+    element: <LoveletterSearch />,
   },
 ]);
 
